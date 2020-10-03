@@ -1,0 +1,130 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="11dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button"
+            android:onClick="onClick"
+            android:text="@string/plus"
+            android:textColor="@color/background"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/multiply"
+            app:layout_constraintEnd_toStartOf="@+id/minus" />
+
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="71dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button"
+            android:onClick="onClick"
+            android:text="@string/minus"
+            android:textColor="@color/background"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/divide"
+            app:layout_constraintEnd_toStartOf="@+id/number2"
+            app:layout_constraintStart_toEndOf="@+id/number1" />
+
+        <Button
+            android:id="@+id/multiply"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="191dp"
+            android:layout_marginRight="191dp"
+            android:background="@drawable/button"
+            android:onClick="onClick"
+            android:text="@string/multiply"
+            android:textColor="@color/background"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="@+id/number2"
+            app:layout_constraintStart_toEndOf="@+id/number1"
+            app:layout_constraintTop_toTopOf="@+id/minus" />
+
+        <Button
+            android:id="@+id/divide"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="71dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/button"
+            android:onClick="onClick"
+            android:text="@string/divide"
+            android:textColor="@color/background"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/number2"
+            app:layout_constraintStart_toEndOf="@+id/number1"
+            app:layout_constraintTop_toTopOf="@+id/number2" />
+
+
+        <EditText
+            android:id="@+id/number1"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/number"
+            android:inputType="number"
+            android:textColor="@color/input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/number2"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/number2"
+            android:inputType="numberDecimal"
+            android:textColor="@color/input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/answer"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="41dp"
+            android:background="@drawable/button"
+            android:onClick="displayAnswer"
+            android:text="@string/ans"
+            android:textColor="@color/background"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/divide"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/multiply"
+            app:layout_constraintVertical_bias="0.168" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
